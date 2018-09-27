@@ -1,0 +1,5 @@
+<App>
+	<ClientPanel>
+		<EditHikePage/>
+	</ClientPanel>
+</App>
