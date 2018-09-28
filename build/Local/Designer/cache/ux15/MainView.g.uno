@@ -1,51 +1,6 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
-    [Uno.Compiler.UxGenerated]
-    public partial class Template: Uno.UX.Template
-    {
-        [Uno.WeakReference] internal readonly MainView __parent;
-        [Uno.WeakReference] internal readonly MainView __parentInstance;
-        public Template(MainView parent, MainView parentInstance): base(null, false)
-        {
-            __parent = parent;
-            __parentInstance = parentInstance;
-        }
-        global::Uno.UX.Property<string> __self_Text_inst;
-        internal global::Fuse.Reactive.EventBinding temp_eb0;
-        static Template()
-        {
-        }
-        public override object New()
-        {
-            var __self = new global::Fuse.Controls.Button();
-            __self_Text_inst = new Hikr_FuseControlsButtonBase_Text_Property(__self, __selector0);
-            var temp = new global::Fuse.Reactive.Data("name");
-            var temp1 = new global::Fuse.Reactive.Data("chooseHike");
-            var temp2 = new global::Fuse.Reactive.DataBinding(__self_Text_inst, temp, Fuse.Reactive.BindingMode.Default);
-            temp_eb0 = new global::Fuse.Reactive.EventBinding(temp1);
-            __self.SourceLineNumber = 73;
-            __self.SourceFileName = "MainView.ux";
-            global::Fuse.Gestures.Clicked.AddHandler(__self, temp_eb0.OnEvent);
-            temp.SourceLineNumber = 73;
-            temp.SourceFileName = "MainView.ux";
-            temp1.SourceLineNumber = 73;
-            temp1.SourceFileName = "MainView.ux";
-            __self.Bindings.Add(temp2);
-            __self.Bindings.Add(temp_eb0);
-            return __self;
-        }
-        static global::Uno.UX.Selector __selector0 = "Text";
-    }
-    global::Uno.UX.Property<object> temp_Items_inst;
-    global::Uno.UX.Property<string> temp1_Value_inst;
-    global::Uno.UX.Property<string> temp2_Value_inst;
-    global::Uno.UX.Property<string> temp3_Value_inst;
-    global::Uno.UX.Property<string> temp4_Value_inst;
-    global::Uno.UX.Property<string> temp5_Value_inst;
-    global::Uno.UX.NameTable __g_nametable;
-    static string[] __g_static_nametable = new string[] {
-    };
     internal global::Fuse.Reactive.FuseJS.DiagnosticsImplModule FuseReactiveFuseJSDiagnosticsImplModule;
     internal global::Fuse.Reactive.FuseJS.Http FuseReactiveFuseJSHttp;
     internal global::Fuse.Reactive.FuseJS.TimerModule FuseReactiveFuseJSTimerModule;
@@ -198,114 +153,13 @@ public partial class MainView: Fuse.App
         FuseJSBundle = new global::FuseJS.Bundle();
         FuseJSFileReaderImpl = new global::FuseJS.FileReaderImpl();
         FuseJSUserEvents = new global::FuseJS.UserEvents();
-        __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
-        var temp = new global::Fuse.Reactive.Each();
-        temp_Items_inst = new Hikr_FuseReactiveEach_Items_Property(temp, __selector0);
-        var temp6 = new global::Fuse.Reactive.Data("hikes");
-        var temp1 = new global::Fuse.Controls.TextBox();
-        temp1_Value_inst = new Hikr_FuseControlsTextInputControl_Value_Property(temp1, __selector1);
-        var temp7 = new global::Fuse.Reactive.Data("name");
-        var temp2 = new global::Fuse.Controls.TextBox();
-        temp2_Value_inst = new Hikr_FuseControlsTextInputControl_Value_Property(temp2, __selector1);
-        var temp8 = new global::Fuse.Reactive.Data("location");
-        var temp3 = new global::Fuse.Controls.TextBox();
-        temp3_Value_inst = new Hikr_FuseControlsTextInputControl_Value_Property(temp3, __selector1);
-        var temp9 = new global::Fuse.Reactive.Data("distance");
-        var temp4 = new global::Fuse.Controls.TextBox();
-        temp4_Value_inst = new Hikr_FuseControlsTextInputControl_Value_Property(temp4, __selector1);
-        var temp10 = new global::Fuse.Reactive.Data("rating");
-        var temp5 = new global::Fuse.Controls.TextView();
-        temp5_Value_inst = new Hikr_FuseControlsTextInputControl_Value_Property(temp5, __selector1);
-        var temp11 = new global::Fuse.Reactive.Data("comments");
-        var temp12 = new global::Fuse.Controls.ClientPanel();
-        var temp13 = new global::Fuse.Reactive.JavaScript(__g_nametable);
-        var temp14 = new global::Fuse.Controls.StackPanel();
-        var temp15 = new Template(this, this);
-        var temp16 = new global::Fuse.Reactive.DataBinding(temp_Items_inst, temp6, Fuse.Reactive.BindingMode.Default);
-        var temp17 = new global::Fuse.Controls.Text();
-        var temp18 = new global::Fuse.Reactive.DataBinding(temp1_Value_inst, temp7, Fuse.Reactive.BindingMode.Default);
-        var temp19 = new global::Fuse.Controls.Text();
-        var temp20 = new global::Fuse.Reactive.DataBinding(temp2_Value_inst, temp8, Fuse.Reactive.BindingMode.Default);
-        var temp21 = new global::Fuse.Controls.Text();
-        var temp22 = new global::Fuse.Reactive.DataBinding(temp3_Value_inst, temp9, Fuse.Reactive.BindingMode.Default);
-        var temp23 = new global::Fuse.Controls.Text();
-        var temp24 = new global::Fuse.Reactive.DataBinding(temp4_Value_inst, temp10, Fuse.Reactive.BindingMode.Default);
-        var temp25 = new global::Fuse.Controls.Text();
-        var temp26 = new global::Fuse.Reactive.DataBinding(temp5_Value_inst, temp11, Fuse.Reactive.BindingMode.Default);
-        temp12.SourceLineNumber = 2;
-        temp12.SourceFileName = "MainView.ux";
-        temp12.Children.Add(temp13);
-        temp12.Children.Add(temp14);
-        temp13.Code = "\n\t\tvar Observable = require(\"FuseJS/Observable\");\n\t\t\n\t\tvar hikes = [\n\t\t{\n\t\t\tid: 0,\n\t\t\tname: \"Tricky Trails\",\n\t\t\tlocation: \"Lakebed, Utah\",\n\t\t\tdistance: 10.4,\n\t\t\trating: 4,\n\t\t\tcomments: \"This hike was nice and hike-like. Glad I didn't bring a bike.\"\n\t\t},\n\t\t{\n\t\t\tid: 1,\n\t\t\tname: \"Mondo Mountains\",\n\t\t\tlocation: \"Black Hills, South Dakota\",\n\t\t\tdistance: 20.86,\n\t\t\trating: 3,\n\t\t\tcomments: \"Not the best, but would probably do again. Note to self: don't forget the sandwiches next time.\"\n\t\t},\n\t\t{\n\t\t\tid: 2,\n\t\t\tname: \"Pesky Peaks\",\n\t\t\tlocation: \"Bergenhagen, Norway\",\n\t\t\tdistance: 8.2,\n\t\t\trating: 5,\n\t\t\tcomments: \"Short but SO sweet!!\"\n\t\t},\n\t\t{\n\t\t\tid: 3,\n\t\t\tname: \"Rad Rivers\",\n\t\t\tlocation: \"Moriyama, Japan\",\n\t\t\tdistance: 12.3,\n\t\t\trating: 4,\n\t\t\tcomments: \"Took my time with this one. Great view!\"\n\t\t},\n\t\t{\n\t\t\tid: 4,\n\t\t\tname: \"Dangerous Dirt\",\n\t\t\tlocation: \"Cactus, Arizona\",\n\t\t\tdistance: 19.34,\n\t\t\trating: 2,\n\t\t\tcomments: \"Too long, too hot. Also that snakebite wasn't very fun.\"\n\t\t}\n\t\t];\n\n\n\t\tvar hike = Observable();\n\t\tvar name = hike.map(function(x) { return x.name; });\n\t\tvar location = hike.map(function(x) { return x.location; });\n\t\tvar distance = hike.map(function(x) { return x.distance; });\n\t\tvar rating = hike.map(function(x) { return x.rating; });\n\t\tvar comments = hike.map(function(x) { return x.comments; });\n\t\tfunction chooseHike(arg) {\n\t\t\thike.value = arg.data;\n\n\t\t}\n\t\tmodule.exports = {\n\t\t\thikes: hikes,\n\n\t\t\tname: name,\n\t\t\tlocation: location,\n\t\t\tdistance: distance,\n\t\t\trating: rating,\n\t\t\tcomments: comments,\n\t\t\tchooseHike: chooseHike\n\t\t};\n\t\t";
-        temp13.LineNumber = 3;
-        temp13.FileName = "MainView.ux";
-        temp13.SourceLineNumber = 3;
-        temp13.SourceFileName = "MainView.ux";
-        temp14.SourceLineNumber = 71;
-        temp14.SourceFileName = "MainView.ux";
-        temp14.Children.Add(temp);
-        temp14.Children.Add(temp17);
-        temp14.Children.Add(temp1);
-        temp14.Children.Add(temp19);
-        temp14.Children.Add(temp2);
-        temp14.Children.Add(temp21);
-        temp14.Children.Add(temp3);
-        temp14.Children.Add(temp23);
-        temp14.Children.Add(temp4);
-        temp14.Children.Add(temp25);
-        temp14.Children.Add(temp5);
-        temp.SourceLineNumber = 72;
+        var temp = new global::Fuse.Controls.ClientPanel();
+        var temp1 = new global::EditHikePage();
+        temp.SourceLineNumber = 2;
         temp.SourceFileName = "MainView.ux";
-        temp.Templates.Add(temp15);
-        temp.Bindings.Add(temp16);
-        temp6.SourceLineNumber = 72;
-        temp6.SourceFileName = "MainView.ux";
-        temp17.Value = "Name:";
-        temp17.SourceLineNumber = 75;
-        temp17.SourceFileName = "MainView.ux";
-        temp1.SourceLineNumber = 76;
+        temp.Children.Add(temp1);
+        temp1.SourceLineNumber = 3;
         temp1.SourceFileName = "MainView.ux";
-        temp1.Bindings.Add(temp18);
-        temp7.SourceLineNumber = 76;
-        temp7.SourceFileName = "MainView.ux";
-        temp19.Value = "Location:";
-        temp19.SourceLineNumber = 77;
-        temp19.SourceFileName = "MainView.ux";
-        temp2.SourceLineNumber = 78;
-        temp2.SourceFileName = "MainView.ux";
-        temp2.Bindings.Add(temp20);
-        temp8.SourceLineNumber = 78;
-        temp8.SourceFileName = "MainView.ux";
-        temp21.Value = "Distance:";
-        temp21.SourceLineNumber = 79;
-        temp21.SourceFileName = "MainView.ux";
-        temp3.InputHint = Fuse.Controls.TextInputHint.Decimal;
-        temp3.SourceLineNumber = 80;
-        temp3.SourceFileName = "MainView.ux";
-        temp3.Bindings.Add(temp22);
-        temp9.SourceLineNumber = 80;
-        temp9.SourceFileName = "MainView.ux";
-        temp23.Value = "Rating:";
-        temp23.SourceLineNumber = 81;
-        temp23.SourceFileName = "MainView.ux";
-        temp4.InputHint = Fuse.Controls.TextInputHint.Integer;
-        temp4.SourceLineNumber = 82;
-        temp4.SourceFileName = "MainView.ux";
-        temp4.Bindings.Add(temp24);
-        temp10.SourceLineNumber = 82;
-        temp10.SourceFileName = "MainView.ux";
-        temp25.Value = "Comments:";
-        temp25.SourceLineNumber = 83;
-        temp25.SourceFileName = "MainView.ux";
-        temp5.TextWrapping = Fuse.Controls.TextWrapping.Wrap;
-        temp5.SourceLineNumber = 84;
-        temp5.SourceFileName = "MainView.ux";
-        temp5.Bindings.Add(temp26);
-        temp11.SourceLineNumber = 84;
-        temp11.SourceFileName = "MainView.ux";
-        __g_nametable.This = this;
-        this.Children.Add(temp12);
+        this.Children.Add(temp);
     }
-    static global::Uno.UX.Selector __selector0 = "Items";
-    static global::Uno.UX.Selector __selector1 = "Value";
 }

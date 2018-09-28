@@ -1,12 +1,7 @@
 <Page ux:Class ="EditHikePage">
-	
-	<JavaScript File="hikes.js"/>
-	</JavaScript>
+	<JavaScript File="EditHikePage.js"/>
 	<ScrollView>
 		<StackPanel>
-			<Each Items="{hikes}">
-				<Button Text="{name}" Clicked="{chooseHike}" />
-			</Each>
 			<Text>Name:</Text>
 			<TextBox Value="{name}"/>
 			<Text>Location:</Text>
